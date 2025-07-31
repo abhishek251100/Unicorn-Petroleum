@@ -1,13 +1,12 @@
-import "./App.css";
-import "@fontsource/roboto";
-import Navbar from "./assets/components/Navbar";
+import React from 'react'
+import Routing from "./Routing/Routing"
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Navbar />
-    </>
-  );
+    <div>
+      <Routing/>
+    </div>
+  )
 }
 
-export default App;
+export default App
