@@ -1,12 +1,30 @@
-import "@fontsource/roboto";
-import Navbar from "../Common/Navbar";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from '../Common/Layout'
+import HomePage from '../Pages/HomePage'
+import AboutPage from '../Pages/AboutPage'
 
-function App() {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Layout />,
+        children: [
+            {
+                path: "/",
+                element: <HomePage />
+            },
+
+             {
+                path: "/about",
+                element: <AboutPage/>
+            },
+          ]
+    }
+])
+
+function Routing() {
+    return <RouterProvider router={router} />
 }
 
-export default App;
+export default Routing
